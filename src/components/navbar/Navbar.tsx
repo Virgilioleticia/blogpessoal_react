@@ -11,7 +11,7 @@ function Navbar() {
 
   function logout(){
     handleLogout();
-    alert("O usuario foi desconectado com sucesso");
+    alert("O usuario foi desconectado com sucesso!");
     navigate("/")
   }
 
@@ -26,10 +26,10 @@ function Navbar() {
               <Link to="/login" className="hover:underline font-bold">Login</Link>
               <Link to="/home" className="hover:underline font-bold">Home</Link>
                 <div className="hover:underline font-bold">Postagens</div>
-                <div className="hover:underline font-bold">Temas</div>
-                <div className="hover:underline font-bold">Cadastrar tema</div>
+                <Link to="/temas" className="hover:underline font-bold">Temas</Link>
+                <Link to="/cadastroTema" className="hover:underline font-bold">Cadastrar tema</Link>
                 <div className="hover:underline font-bold">Perfil</div>
-                <div className="hover:underline font-bold mr-4"> <Link to='' onClick={logout} className="hover:underline"> Sair </Link> </div>
+                <Link to='' onClick={logout} className="hover:underline font-bold mr-4">Sair</Link> 
               </div>
             </div>
           </div>
