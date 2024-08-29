@@ -5,10 +5,9 @@ import Home from "./pages/home/home";
 import Cadastro from "./pages/cadastro/Cadastro";
 import Login from "./pages/login/Login";
 import { AuthProvider } from "./contexts/AuthContext";
-
 import FormularioTema from "./components/temas/formulariotemas/FormTemas";
 import ListaTemas from "./components/temas/listatema/listaTema";
-import DeletarTema from "./components/deletartema/DeletarTema";
+import DeletarTema from "./components/temas/deletartema/DeletarTema";
 
 
 function App() {
