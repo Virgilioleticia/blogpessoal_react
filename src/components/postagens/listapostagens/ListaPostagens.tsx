@@ -4,7 +4,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Postagem from '../../../models/Postagem';
 import { buscar } from '../../../service/Service';
 import CardPostagem from '../cardpostagens/CardPostagens';
-import { ToastAlert } from '../../../utils/ToastAlerta';
+import { ToastAlert } from '../../../utils/ToastAlert';
 
 
 function ListaPostagens() {

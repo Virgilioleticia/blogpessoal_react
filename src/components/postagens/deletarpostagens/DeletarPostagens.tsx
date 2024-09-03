@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { AuthContext } from '../../../contexts/AuthContext'
 import Postagem from '../../../models/Postagem'
 import { buscar, deletar } from '../../../service/Service'
-import { ToastAlert } from '../../../utils/ToastAlerta'
+import { ToastAlert } from '../../../utils/ToastAlert'
 
 function DeletarPostagem() {
   

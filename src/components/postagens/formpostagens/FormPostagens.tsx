@@ -6,7 +6,7 @@ import Tema from "../../../models/Tema";
 
 import { RotatingLines } from "react-loader-spinner";
 import { atualizar, buscar, cadastrar } from "../../../service/Service";
-import { ToastAlert } from "../../../utils/ToastAlerta";
+import { ToastAlert } from "../../../utils/ToastAlert";
 
 function FormPostagem() {
 

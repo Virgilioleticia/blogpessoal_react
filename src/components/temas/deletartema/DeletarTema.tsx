@@ -4,7 +4,7 @@ import { RotatingLines } from "react-loader-spinner";
 import Tema from "../../../models/Tema";
 import AuthContext from "../../../contexts/AuthContext";
 import { buscar, deletar } from "../../../service/Service";
-import { ToastAlert } from "../../../utils/ToastAlerta";
+import { ToastAlert } from "../../../utils/ToastAlert";
 
 
 

@@ -4,7 +4,7 @@ import Usuario from '../../models/Usuario'
 import { useNavigate } from 'react-router-dom'
 import { cadastrarUsuario } from '../../service/Service';
 import { RotatingLines } from 'react-loader-spinner';
-import { ToastAlert } from '../../utils/ToastAlerta';
+import { ToastAlert } from '../../utils/ToastAlert';
 
 function Cadastro() {
 
