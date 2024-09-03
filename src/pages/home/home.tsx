@@ -25,9 +25,10 @@ function Home() {
                 </div>
 
           </div>
-          <div className="flex justify-center ">
-            <img src="https://i.imgur.com/VpwApCU.png" alt="Imagem da Página Home" 
-            className="w-2/3"/>
+          <div className="flex justify-center mb-10">
+            <img src="https://ik.imagekit.io/e5otp0bxb/358c6910e5e6f49b4b5ed3e377a9a4c8.gif?updatedAt=1725395073504" alt="Imagem da Página Home" 
+            className="w-3/4 h-64 rounded-lg object-cover"
+            />
 
           </div>
         </div>
