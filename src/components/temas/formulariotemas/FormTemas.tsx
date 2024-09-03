@@ -5,6 +5,7 @@ import Tema from "../../../models/Tema";
 
 import { RotatingLines } from "react-loader-spinner";
 import { atualizar, buscar, cadastrar } from "../../../service/Service";
+import { ToastAlert } from "../../../utils/ToastAlerta";
 
 function FormTema() {
 
@@ -25,15 +26,15 @@ function FormTema() {
                 headers: { Authorization: token }
             })
         } catch (error: any) {
-            if (error.toString().includes('401')) {
+            if (error.toString().includes("401")) {
                 handleLogout()
             }
         }
     }
 
     useEffect(() => {
-        if (token === '') {
-            alert('Você precisa estar logado!')
+        if (token === "") {
+            ToastAlert("Você precisa estar logado!", "sucesso")
             navigate('/')
         }
     }, [token])
@@ -65,12 +66,12 @@ function FormTema() {
                 await atualizar(`/temas`, tema, setTema, {
                     headers: { 'Authorization': token }
                 });
-                alert('Tema atualizado com sucesso!');
+                ToastAlert("Tema atualizado com sucesso!", "sucesso");
             } catch (error: any) {
-                if (error.toString().includes('401')) {
+                if (error.toString().includes("401")) {
                     handleLogout()
                 } else {
-                    alert('Erro ao atualizar o Tema!')
+                    ToastAlert("Erro ao atualizar o Tema!", "sucesso")
                 }
             }
 
@@ -80,12 +81,12 @@ function FormTema() {
                 await cadastrar(`/temas`, tema, setTema, {
                     headers: { 'Authorization': token }
                 });
-                alert('Tema cadastrado com sucesso!');
+                ToastAlert("Tema cadastrado com sucesso!", "sucesso");
             } catch (error: any) {
                 if (error.toString().includes('401')) {
                     handleLogout()
                 } else {
-                    alert('Erro ao cadastrar o Tema!')
+                    ToastAlert("Erro ao cadastrar o Tema!", "erro")
                 }
             }
 
@@ -99,7 +100,7 @@ function FormTema() {
         <div className="container flex flex-col items-center justify-center mx-auto">
             <h1 className="text-4xl text-center my-8">
 
-                {id === undefined ? 'Cadastrar Tema' : 'Editar Tema'}
+                {id === undefined ? "Cadastrar Tema" : "Editar Tema"}
             </h1>
 
             <form className="w-1/2 flex flex-col gap-4"
@@ -110,7 +111,7 @@ function FormTema() {
                     <input
                         type="text"
                         placeholder="Descreva aqui seu tema"
-                        name='descricao'
+                        name="descricao"
                         className="border-2 border-slate-700 rounded p-2"
                         value={tema.descricao}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}

@@ -1,23 +1,28 @@
 import { Link, useNavigate } from "react-router-dom"
 import AuthContext from "../../contexts/AuthContext"
-import { useContext } from "react"
+import { ReactNode, useContext } from "react"
+import { ToastAlert } from "../../utils/ToastAlerta";
 
 
 function Navbar() {
 
   const navigate = useNavigate();
 
-  const { handleLogout} = useContext(AuthContext)
+  const { usuario, handleLogout} = useContext(AuthContext)
 
   function logout(){
     handleLogout();
-    alert("O usuario foi desconectado com sucesso!");
+    ToastAlert("O usuario foi desconectado com sucesso!", "sucesso");
     navigate("/")
   }
 
-    return (
-      <>
-       <div className="w-full bg-emerald-400 text-white flex justify-center py-4">
+  let component: ReactNode;
+
+  if (usuario.token !== ""){
+
+    component = (
+
+      <div className="w-full bg-emerald-600 text-white flex justify-center py-4">
             <div className="container flex justify-between text-lg">
 
             <Link to="/home" className="text-2x1 font-bold ml-4"> Blog Pessoal </Link>
@@ -25,14 +30,22 @@ function Navbar() {
               <div className="flex gap-4">
               <Link to="/login" className="hover:underline font-bold">Login</Link>
               <Link to="/home" className="hover:underline font-bold">Home</Link>
-                <div className="hover:underline font-bold">Postagens</div>
+                <Link to="/postagens" className="hover:underline font-bold">Postagens</Link>
                 <Link to="/temas" className="hover:underline font-bold">Temas</Link>
                 <Link to="/cadastroTema" className="hover:underline font-bold">Cadastrar tema</Link>
-                <div className="hover:underline font-bold">Perfil</div>
+                <Link to="/perfil" className="hover:underline font-bold">Perfil</Link>
                 <Link to='' onClick={logout} className="hover:underline font-bold mr-4">Sair</Link> 
               </div>
             </div>
           </div>
+    )
+  }
+
+    return (
+      <>
+
+       {component}
+
       </>
     )
   }

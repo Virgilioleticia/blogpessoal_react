@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../../../contexts/AuthContext";
 import { buscar } from "../../../service/Service";
 import CardTemas from "../cardtemas/cardTemas";
+import { ToastAlert } from "../../../utils/ToastAlerta";
 
 
 function ListaTemas() {
@@ -22,7 +23,7 @@ function ListaTemas() {
             });
 
         } catch (error: any) {
-            if (error.toString().includes('401')) {
+            if (error.toString().includes("401")) {
                 handleLogout();
             }
         }
@@ -30,9 +31,9 @@ function ListaTemas() {
 
     // Monitorar o Token
     useEffect(() => {
-        if (token === '') {
-            alert('Você precisa estar logado!');
-            navigate('/')
+        if (token === "") {
+            ToastAlert("Você precisa estar logado!", "info");
+            navigate("/")
         }
     }, [token]);
 

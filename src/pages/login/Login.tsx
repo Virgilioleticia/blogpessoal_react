@@ -64,7 +64,7 @@ function Login() {
 
             />
           </div>
-          <button type='submit' className="rounded bg-emerald-400 hover:bg-emerald-600 text-white w-1/2 py-2 flex justify-center">
+          <button type='submit' className="rounded bg-emerald-600 hover:bg-emerald-800 text-white w-1/2 py-2 flex justify-center">
             {isLoading ? <RotatingLines
               strokeColor="white"
               strokeWidth="5"
@@ -79,7 +79,7 @@ function Login() {
 
           <p>
             Ainda não tem uma conta?{' '}
-            <Link to="/cadastro" className="text-sky-900 hover:underline">
+            <Link to="/cadastro" className="text-emerald-950 hover:underline">
               Cadastre-se
             </Link>
 
