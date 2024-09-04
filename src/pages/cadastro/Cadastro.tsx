@@ -78,8 +78,6 @@ function Cadastro() {
     }
 
 
-
-
     console.log(usuario)
     console.log(confirmaSenha)
 
