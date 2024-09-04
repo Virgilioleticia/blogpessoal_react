@@ -93,7 +93,7 @@ function Cadastro() {
                             type="text"
                             id="nome"
                             name="nome"
-                            placeholder="Nome"
+                            placeholder="Insira seu nome"
                             className="border-2 border-slate-700 rounded p-2"
                             value={usuario.nome}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -106,7 +106,7 @@ function Cadastro() {
                             type="text"
                             id="usuario"
                             name="usuario"
-                            placeholder="Usuario"
+                            placeholder="Insira um e-mail"
                             className="border-2 border-slate-700 rounded p-2"
                             value={usuario.usuario}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -118,7 +118,7 @@ function Cadastro() {
                             type="text"
                             id="foto"
                             name="foto"
-                            placeholder="Foto"
+                            placeholder="Insira um link para sua foto"
                             className="border-2 border-slate-700 rounded p-2"
                             value={usuario.foto}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -130,7 +130,7 @@ function Cadastro() {
                             type="password"
                             id="senha"
                             name="senha"
-                            placeholder="Senha"
+                            placeholder="Insira a sua senha"
                             className="border-2 border-slate-700 rounded p-2"
                             value={usuario.senha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -142,7 +142,7 @@ function Cadastro() {
                             type="password"
                             id="confirmarSenha"
                             name="confirmarSenha"
-                            placeholder="Confirmar Senha"
+                            placeholder="Confirme sua senha"
                             className="border-2 border-slate-700 rounded p-2"
                             value={confirmaSenha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
